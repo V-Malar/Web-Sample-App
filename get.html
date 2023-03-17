@@ -35,7 +35,7 @@
                 let container = document.querySelector('.container');
                 for (let i = 0; i < convert_data.length; i++) {
                     let label = document.createElement('label');
-                    label.innerHTML = "Breakfast: " + convert_data[i].breakfast + " Lunch:" + convert_data[i].lunch + "<br/>"
+                    label.innerHTML = "Breakfast: " + convert_data[i].breakfast + " Lunch:" + convert_data[i].id + "<br/>"
                     container.append(label)
                 }
                 alert("Fetch out succesfully");
