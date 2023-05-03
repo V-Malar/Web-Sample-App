@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern-lights</title>
+    <style>
+        body {
+            background: black;
+            overflow: hidden;
+            animation: animate1 35s infinite;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .sky {
+            height: 40vh;
+            background: black;
+            animation: animate1 35s infinite;
+            transform: rotate(20deg);
+        }
+
+        .sky2 {
+            background-color: rgba(0, 255, 255, 0.692);
+            animation: animate1 35s infinite;
+        }
+
+        .sky {
+            position: relative;
+            display: flex;
+            z-index: 9;
+            animation: animate1 35s infinite;
+            padding: 0 20px;
+            justify-content: center;
+        }
+
+        .sky span,
+        .span2 {
+            top: 150px;
+            position: relative;
+            bottom: 50px;
+            display: block;
+            margin: 0 2px 50px;
+            min-width: 10px;
+            height: 250px;
+            z-index: 10;
+            border-radius: 100%;
+            transition: 7s;
+            background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(0, 0, 0), rgba(0, 255, 255, 0.692), rgb(3, 55, 97), rgb(14, 117, 83), rgba(0, 255, 255, 0.692), rgb(3, 55, 97), rgb(0, 68, 45), rgba(0, 255, 255, 0.692), rgb(3, 55, 97));
+            animation: animate 30s linear infinite;
+            opacity: 0;
+            transform: rotate3d(calc(var(--v) * 30deg));
+            filter: blur(calc(var(--v) * 5px));
+            animation-delay: calc(var(--v) * 5s);
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scaleX(5);
+                background-color: rgb(0, 10, 5);
+                animation-delay: calc(var(--v) * 5s);
+            }
+
+            15% {
+                opacity: 0.5;
+                background-color: rgb(1, 37, 18);
+                animation-delay: calc(var(--v) * 0.5s);
+            }
+
+            50% {
+                transform: translateX(30px) scaleX(3);
+                background: rgb(20, 43, 253);
+                animation-delay: calc(var(--v) * 3s);
+            }
+
+            55% {
+                background: rgba(12, 218, 5, 0.89);
+                animation-delay: calc(var(--v) * 5s);
+            }
+            65% {
+                background: rgba(5, 168, 218, 0.89);
+                animation-delay: calc(var(--v) * 3s);
+            }
+
+            100% {
+                transform: scaleX(10);
+                animation-delay: calc(var(--v) * 0.5s);
+                background: rgb(1, 7, 59);
+            }
+        }
+        @keyframes animate2 {
+            0% {
+                color: rgb(1, 13, 15);
+            }
+
+            15% {
+                opacity: 0.5;
+                color: rgb(24, 24, 24);
+            }
+
+            50% {
+                color: rgb(3, 3, 27);
+            }
+
+            55% {
+                color: rgb(1, 7, 37);
+            }
+
+            ;
+            75% {
+                color: rgb(6, 37, 37);
+            }
+
+            100% {
+                color: rgb(24, 22, 22);
+            }
+        }
+
+        .sky p {
+            margin-left: 190px;
+            margin-top: -25px;
+            position: absolute;
+            font-size: 3px;
+            color: rgb(0, 0, 0);
+            animation: animate2 35s infinite;
+            z-index: 0;
+            background-color: #000000;
+            box-shadow: 3px -10px 3px 1px rgb(255, 203, 203);
+        }
+
+        .shadow img
+        {
+            background-color: rgb(0, 0, 0);
+            width: 250px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="sky">
+        <span style="--v:4; top: 4px;"></span>
+        <p style="top: 550px; left: 750px;">꙳</p>
+        <span style="--v:2; top: 8px; height: 10px;"></span>
+        <p style="top: 500px; left: 340px">꙳</p>
+        <span style="--v:5; top: 12px;"></span>
+        <p style="top: 450px; left: 530px">꙳</p>
+        <span style="--v:7; top: 16px; height: 10px;"></span>
+        <p style="top: 400px; left: 420px">꙳</p>
+        <span style="--v:4; top: 20px;"></span>
+        <p style="top: 350px; left: 310px">꙳</p>
+        <span style="--v:4; top: 24px; height: 10px;"></span>
+        <p style="top: 600px; left: 300px">꙳</p>
+        <span style="--v:2; top: 28px;"></span>
+        <p style="top: 530px; left: 450px">꙳</p>
+        <span style="--v:5; top: 32px; height: 10px;"></span>
+        <p style="top: 500px; left: 240px">꙳</p>
+        <span style="--v:7; top: 36px;"></span>
+        <p style="top: 540px; left: 0px">꙳</p>
+        <span style="--v:4; top: 40px; height: 10px;"></span>
+        <p style="top: 400px; left: 20px">꙳</p>
+        <span style="--v:2; top: 5px;"></span>
+        <p style="top: 350px; left: 10px">꙳</p>
+        <span style="--v:5; top: 10px; height: 10px;"></span>
+        <p style="top: 300px; left: 0px">꙳</p>
+        <span style="--v:7; top: 500px;"></span>
+        <p style="top: 330px; left: 900px">꙳</p>
+        <span style="--v:9; top: 520px; height: 10px;"></span>
+        <p style="top: 250px; left: 1070px">꙳</p>
+        <span style="--v:9; top: 440px;"></span>
+        <p style="top: 0px; left: 760px">꙳</p>
+        <span style="--v:8; top: 460px; height: 10px;"></span>
+        <p style="top: 60px; left: 550px">꙳</p>
+        <span style="--v:6; top: 35px;"></span>
+        <p style="top: 50px; left: 900px">꙳</p>
+        <span style="--v:10; top: 190px; height: 10px;"></span>
+        <p style="top: 60px; left: 680px">꙳</p>
+        <span style="--v:1; top: 110px;"></span>
+        <p style="top: 20px; left: 630px">꙳</p>
+        <span style="--v:3; top: 50px; height: 10px;"></span>
+        <p style="top: 270px; left: 580px">꙳</p>
+        <span style="--v:8; top: 3px;"></span>
+        <p style="top: 290px; left: 130px">꙳</p>
+        <span style="--v:6; top: 160px; height: 10px;"></span>
+        <p style="top: 130px; left: 490px">꙳</p>
+        <span style="--v:10; top: 19px;"></span>
+        <p style="top: 70px; left: 400px">꙳</p>
+        <span style="--v:1; top: 12px; height: 10px;"></span>
+        <p style="top: 270px; left: 400px">꙳</p>
+        <span style="--v:3; top: 15px;"></span>
+        <p style="top: 290px; left: 250px">꙳</p>
+        <span style="--v:7; top: 18px; height: 10px;"></span>
+        <p style="top: 175px; left: 300px">꙳</p>
+        <span style="--v:9; top: 21px;"></span>
+        <p style="top: 40px; left: 250px">꙳</p>
+        <span style="--v:8; top: 24px; height: 10px;"></span>
+        <p style="top: 350px; left: 200px">꙳</p>
+        <span style="--v:6; top: 27px;"></span>
+        <p style="top: 390px; left: 150px">꙳</p>
+        <span style="--v:10; top: 30px; height: 10px;"></span>
+        <p style="top: 350px; left: 780px">꙳</p>
+        <span style="--v:1; top: 10px;"></span>
+        <p style="top: 134px; left: 750px">꙳</p>
+        <span style="--v:3; top: 20px; height: 10px;"></span>
+        <p style="top: 330px; left: 700px">꙳</p>
+        <span style="--v:4; top: 30px;"></span>
+        <span style="--v:4; top: 40px; height: 10px;"></span>
+        <span style="--v:2; top: 50px;"></span>
+        <span style="--v:5; top: 60px;"></span>
+        <span style="--v:2; top: 70px; height: 10px;"></span>
+        <span style="--v:5; top: 80px;"></span>
+        <span style="--v:7; top: 90px;"></span>
+        <span style="--v:9; top: 100px; height: 10px;"></span>
+    </div>
+    <div class="shadow" style=" width: 100px; height: 100px; top: 450px; display: flex; position: absolute;">
+        <img src="mountain.png" alt="Image here."/>
+        <img src="mountain.png" alt="Image here."/>
+        <img src="mountain.png" style="margin-left: 3in;" alt="Image here."/>
+        <img style="margin-left: 3in;" src="mountain.png" alt="Image here."/>
+        <img src="mountain.png" alt="Image here."/>
+    </div>
+</body>
+</html>
