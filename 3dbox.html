@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-BOX</title>
+    <style>
+        button
+        {
+            font-size: 30px;
+            padding: 0.4rem;
+            margin-bottom: 13px;
+        }
+        button:hover
+        {
+            color: burlywood;
+            outline: none;
+            font-weight: 600;
+            background-color: rgb(166, 58, 255);
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .main {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .main .main-box {
+            display: flex;
+            width: 600px;
+            height: 600px;
+        }
+
+        .main.main-box .box {
+            transform: rotateZ(360deg);
+        }
+
+        .box {
+            background-image: url('/travel-time/src/Assets/eiffeltower.jpeg');
+            position: relative;
+            background-size: 500px 500px;
+            background-repeat: no-repeat;
+            width: 125px;
+            height: 125px;
+            transition: 3s ease-in-out;
+            box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.836);
+        }
+
+        .box::after {
+            content: '';
+            background-color: #d4d4b67a;
+            position: absolute;
+            top: 8px;
+            right: -15px;
+            height: 100%;
+            width: 15px;
+            transform: skewY(45deg);
+            box-shadow: 0 0 105px 1px rgb(255, 0, 255);
+        }
+
+        .box::before {
+            content: '';
+            background-color: #aca9a16b;
+            position: absolute;
+            bottom: -15px;
+            left: 8px;
+            height: 15px;
+            width: 100%;
+            transform: skewX(45deg);
+            box-shadow: 0 0 105px 1px rgb(255, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="press">ROTATE</button>
+    <div class="main main-box" id="main"></div>
+    <script>
+        var main = document.getElementById('main');
+        const btn = document.getElementById('press');
+        btn.addEventListener('click', () => {
+            main.classList.toggle('main-box');
+        })
+        function rotateZ() {
+            for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 4; j++) {
+                    let mini = document.createElement('div');
+                    mini.classList.add('box');
+                    mini.style.backgroundPosition = `${-j * 125}px ${-i * 125}px`;
+                    main.appendChild(mini);
+                }
+            }
+        }
+        rotateZ();
+    </script>
+</body>
+
+</html>
